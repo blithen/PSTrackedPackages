@@ -5,7 +5,7 @@
         Particularly when the comment must be frequently edited,
         as with the help and documentation for a function or script.
     .EXAMPLE
-        Add-TrackedPackage <Key> "USPS" "Toilet Paper"
+        Add-TrackedPackage <TrackingNum> "USPS" "Toilet Paper"
 #>
 function Add-TrackedPackage{
     [CmdletBinding()]
