@@ -1,9 +1,6 @@
 <#
     .SYNOPSIS
         Add a tracking number and info to the root csv
-    .DESCRIPTION
-        Particularly when the comment must be frequently edited,
-        as with the help and documentation for a function or script.
     .EXAMPLE
         Add-TrackedPackage <TrackingNum> "USPS" "Toilet Paper"
 #>
