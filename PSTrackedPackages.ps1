@@ -29,8 +29,6 @@ function Add-TrackedPackage{
         set-content $TrackedPackagedCSVFilepath "trackingnum,provider,friendlyname`n`"$trackingnumber`",`"$InProvider`",`"$FriendlyName`""
         return
     }
-
-    $a = import-csv $TrackedPackagedCSVFilepath
     
     [PSCustomObject]@{trackingnum="$TrackingNumber";provider="$InProvider";friendlyname = "$FriendlyName"} | export-csv -append $TrackedPackagedCSVFilepath
 }
