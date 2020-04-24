@@ -1,3 +1,12 @@
+<#
+    .SYNOPSIS
+        Add a tracking number and info to the root csv
+    .DESCRIPTION
+        Particularly when the comment must be frequently edited,
+        as with the help and documentation for a function or script.
+    .EXAMPLE
+        Add-TrackedPackage <Key> "USPS" "Toilet Paper"
+#>
 function Add-TrackedPackage{
     [CmdletBinding()]
 
@@ -25,7 +34,12 @@ function Add-TrackedPackage{
     
     [PSCustomObject]@{trackingnum="$TrackingNumber";provider="$InProvider";friendlyname = "$FriendlyName"} | export-csv -append $TrackedPackagedCSVFilepath
 }
-
+<#
+    .SYNOPSIS
+        Delete a tracking number and info from the root csv
+    .EXAMPLE
+        Remove-TrackedPackage <Key>
+#>
 function Remove-TrackedPackage{
     [CmdletBinding()]
 
@@ -44,7 +58,12 @@ function Remove-TrackedPackage{
     $a| export-csv $TrackedPackagedCSVFilepath
 
 }
-
+<#
+    .SYNOPSIS
+        Gets and returns information regarding the tracking numbers in the root csv
+    .EXAMPLE
+        Get-TrackedPackageInfo $env:UPSKey $env:USPSKey
+#>
 function Get-TrackedPackageInfo {
     [CmdletBinding()]
 
