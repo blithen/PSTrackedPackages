@@ -33,7 +33,7 @@ function Add-TrackedPackage{
     .SYNOPSIS
         Delete a tracking number and info from the root csv
     .EXAMPLE
-        Remove-TrackedPackage <Key>
+        Remove-TrackedPackage <TrackingNum>
 #>
 function Remove-TrackedPackage{
     [CmdletBinding()]
